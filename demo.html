@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light"><title>강을 따라 걷는 오후</title>
+<style>
+*{box-sizing:border-box} html{scroll-padding-top:14px} body{margin:0;color:#152f27;background:#f4f1e8;font:17px/1.65 -apple-system,BlinkMacSystemFont,sans-serif;word-break:keep-all}
+header,article,footer{width:min(100%,1030px);margin:auto} header{padding:16px 24px;border-bottom:1px solid #c8d1bf;display:flex;justify-content:space-between;align-items:center;color:#245948}
+header strong{letter-spacing:-.04em;font-size:19px} header a{font-size:14px;color:inherit;text-decoration:none}
+.intro{padding:clamp(32px,8vw,85px) 24px clamp(48px,8vw,96px)} .intro h1{margin:0 0 14px;font-size:clamp(40px,7vw,90px);line-height:1.05;letter-spacing:-.085em}
+.intro p,.story p{margin:0;color:#3f5f51}.intro a{color:#195d4a} .story{padding:0 24px 30px} .number{display:inline-block;font-size:13px;font-weight:700;color:#1d614a;letter-spacing:.06em;margin:0 0 7px}
+.story h2{font-size:clamp(32px,5.8vw,66px);line-height:1.1;letter-spacing:-.075em;margin:0 0 12px}.story p{max-width:34em;font-size:clamp(15px,2.1vw,19px);line-height:1.6}
+footer{padding:24px;border-top:1px solid #c8d1bf} footer a{color:#195d4a} .demo-confirmation{margin:10px 0 0;color:#3f5f51} figure{margin:18px 0 22px} svg{display:block;width:100%;aspect-ratio:1.73;border-radius:16px;overflow:hidden} figcaption{margin-top:7px;font-size:12px;color:#395c4c} .next{min-height:85vh;padding:30px 24px;border-top:1px solid #c8d1bf} .next a{display:inline-block;margin:5px 18px 5px 0;color:#195d4a}
+@media(min-width:660px){header,.story,.intro,.next{padding-left:44px;padding-right:44px}.story figure{max-width:780px}svg{aspect-ratio:2.7}}
+</style>
+<header><strong>서울 산책</strong><a href="?story=map">산책 지도 ↗</a></header>
+<article class="intro"><span class="number">주말 산책 · 서울</span><h1>서울,<br>강을 따라</h1><p>물가를 따라 천천히 걷는 반나절.</p><a href="#river-walk">산책 시작하기 ↓</a></article>
+<article class="story" id="river-walk"><span class="number">01 / 한강 산책</span><h2>강을 따라 걷는 오후</h2><p>해가 낮아지면 강물은 잔잔한 초록빛을 띱니다. 다리 아래를 지나 강변길을 따라 천천히 걸어봅니다.</p>
+<figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" preserveAspectRatio="xMidYMid slice" role="img" aria-label="해가 지는 한강 풍경">
+<defs><linearGradient id="sky" x2="0" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#f8d893"/><stop offset="1" stop-color="#eac789"/></linearGradient><linearGradient id="water" x2="0" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#579084"/><stop offset="1" stop-color="#215749"/></linearGradient></defs>
+<path fill="url(#sky)" d="M0 0h1000v450H0z"/><circle fill="#fff1bd" cx="688" cy="110" r="67"/>
+<path fill="#98a87f" d="M0 206c128-79 211-106 305-53 56 32 99 51 157 27 117-50 171-31 264-6 114 29 165-16 274-54v171H0Z"/>
+<path fill="#688975" d="M0 212c101-61 221 23 344 15 139-9 171-51 267-32 104 21 196 29 389-9v98H0Z"/>
+<path fill="url(#water)" d="M0 230c238 26 457 8 604-4 128-10 259 6 396 2v222H0Z"/>
+<g fill="none" stroke="#e1d39b" stroke-linecap="round" opacity=".65" stroke-width="3"><path d="M648 245h74m-91 14h104m-70 13h104m-157 16h113m35 0h66m-246 20h181m-145 22h220m-150 22h72m-220 21h151"/><path d="M162 259h142m-82 16h109m-237 26h150m-18 16h169m431-53h105m-87 54h111m-704 44h204"/></g>
+<path fill="#17443a" d="M0 301c69 43 134 53 197 60 97 11 154 40 218 89H0Zm1000-3c-81 19-157 65-193 91-39 28-91 51-119 61h312Z"/>
+<path fill="#2b654f" d="M0 367c51 6 105 34 144 83H0Zm1000-24c-76 15-116 73-132 107h132Z"/>
+<path d="M336 265h74l-14 9h-51z" fill="#f1cd86"/><path d="M370 260v-25l23 25z" fill="#fff2cb"/>
+</svg><figcaption>해 질 무렵, 한강의 물빛</figcaption></figure><p>바람이 잠잠한 날에는 강 건너 언덕과 다리 불빛이 물 위에 길게 비칩니다.</p>
+</article>
+<article class="next"><span class="number">02 / 다음 산책</span><h2>강변에서 정원까지</h2><a href="?story=map">한강 피크닉 지도</a><a href="?story=garden">서울의 작은 정원</a></article>
+<footer><button id="bottom-action" type="button">산책을 마쳤어요</button><p class="demo-confirmation" id="demo-status" role="status"></p><p><a href="support.html">듀오 브라우저 사용자 지원</a></p></footer>
+<script>
+document.querySelector('#bottom-action').addEventListener('click', () => {
+ document.querySelector('#demo-status').textContent = '마지막 버튼을 눌렀습니다.';
+});
+const story = new URLSearchParams(location.search).get('story');
+const stories = {map:['한강 피크닉 지도','잔디밭과 나무 그늘을 따라 쉬어 가기 좋은 자리 세 곳을 골랐습니다.'],garden:['서울의 작은 정원','느린 걸음으로 둘러보기 좋은 서울의 작은 정원입니다.']};
+if (stories[story]) {
+ const [title,description] = stories[story];
+ document.title = title;
+ document.querySelector('.intro').remove();
+ document.querySelector('.story').style.paddingTop = '24px';
+ document.querySelector('.story h2').textContent = title;
+ document.querySelector('.story p').textContent = description;
+}
+</script></html>
