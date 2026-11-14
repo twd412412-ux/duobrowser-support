@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en-US">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Slow Afternoon in Seoul</title>
+<style>
+:root{color-scheme:light;--ink:#133a32;--paper:#f3f0e4;--accent:#176257}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.6 system-ui,sans-serif}
+header,section,footer{padding:clamp(22px,4vw,64px)}header{background:#e0e9d6;padding-top:clamp(56px,8vw,115px)}
+h1,h2,p{margin:0 0 .75em}h1,h2{font:700 clamp(34px,7vw,98px)/1.03 Georgia,serif;letter-spacing:-.04em}h2{font-size:clamp(28px,5vw,64px)}
+p{max-width:62ch}.kicker{font-size:13px;font-weight:750;letter-spacing:.13em;text-transform:uppercase}
+svg{display:block;width:100%;height:clamp(190px,32vw,410px);margin-top:25px;border-radius:18px}a{color:var(--accent);text-underline-offset:4px}
+section:nth-of-type(odd){background:#faf6eb}section{border-top:1px solid #c7d3c7;scroll-margin-top:115px}button{border:1px solid #759c90;border-radius:24px;background:#d7e5d5;padding:10px 16px;color:inherit;font:inherit}
+@media(min-width:720px){header{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:center}svg{margin:0}}
+</style>
+<header id="river-walk">
+<div><p class="kicker">A Seoul walking notebook</p><h1>A Slow Afternoon in Seoul</h1><p>Take the long way along the Han River, then follow the quiet streets uphill as the light goes soft.</p><a href="#river-light">Start by the river</a></div>
+<svg role="img" aria-label="An illustrated river at sunset with green hills and golden reflections" viewBox="0 0 900 500" preserveAspectRatio="xMidYMid slice">
+<defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#e1a975"/><stop offset="1" stop-color="#f8df92"/></linearGradient><linearGradient id="water" x2="0" y2="1"><stop stop-color="#71977c"/><stop offset="1" stop-color="#134e4d"/></linearGradient></defs>
+<rect width="900" height="500" fill="url(#sky)"/><circle cx="651" cy="141" r="76" fill="#ffefb2"/>
+<path fill="#a2ac7e" d="M0 224Q140 125 288 235T560 231T900 213V500H0Z"/>
+<path fill="#577a6d" d="M0 283Q135 210 301 265T610 259T900 251V500H0Z"/>
+<path fill="url(#water)" d="M0 318Q280 310 900 275V500H0Z"/>
+<path stroke="#f5d893" stroke-width="3" opacity=".67" d="M548 318h137m-168 16h241m-326 18h170m24 14h119m-421 22h193m43 20h197M202 421h167"/>
+<path fill="#fff2bd" d="M467 350l24-1-10-15v15z"/><path fill="#173e37" d="M0 433Q134 412 277 500H0Zm900-19q-120 8-216 86h216Z"/>
+</svg>
+</header>
+<main>
+<section id="river-light"><p class="kicker">01 · Riverside</p><h2>When the river catches the light</h2><p>At first the Han is the color of a spoon. Then the sun slips below the clouds and the water turns green and gold. Pick the path closest to the bank. The breeze is cooler there, and you can hear the water between passing bikes.</p><p>I stop at the next bench and watch a boat leave a wake so small it disappears before it reaches the shore.</p><p><a href="?story=lanes#lanes">Read about the side streets</a> · <a href="?story=garden#garden">See the garden path</a></p></section>
+<section id="lanes"><p class="kicker">02 · Side streets</p><h2>Turn uphill at the stone steps</h2><p>Leave the river path at the stairs and take the lane that bends left. Behind the low walls are pots of rosemary, a stack of old tiles, and a bicycle whose basket has filled with leaves. The streets get narrower, and the city sounds farther away.</p><p>Where the pavement levels off, look back. You can still see a thin strip of river between the roofs.</p></section>
+<section id="garden"><p class="kicker">03 · The garden</p><h2>One last loop through the garden</h2><p>In the garden, seed heads lean over the path and the stone seats are still warm. I take the outer loop once more, then wait for the lamps to come on. There is just enough light left to walk back without hurrying.</p><button type="button" onclick="document.getElementById('finish-note').hidden=false">Finish the walk</button><p id="finish-note" role="status" hidden>You’ve reached the end of the walk.</p></section>
+</main>
+<footer><a href="support-en.html">Duo Browser Support</a></footer>
+<script>
+const stories = { lanes: 'Seoul’s Quiet Side Streets', garden: 'A Garden Before Dusk' };
+const story = new URLSearchParams(location.search).get('story');
+if (stories[story]) document.title = stories[story];
+</script>
+</html>
